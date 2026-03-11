@@ -1,1 +1,0 @@
-# bucdtm.github.io
