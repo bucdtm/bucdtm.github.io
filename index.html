@@ -7,6 +7,7 @@
   <title>Pablo | Portfolio</title>
   <meta name="description"
     content="Dashboard interactivo y portafolio de Pablo. Experto en UI/UX, desarrollo creativo, y diseño de interacción.">
+  <link rel="icon" href="/media/favicon/favicongtavi.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -86,7 +87,7 @@
             </div>
             <pre class="code-output"><code class="language-javascript"><span class="token keyword">const</span> <span class="token definition">pablo</span> <span class="token operator">=</span> {
   <span class="token key">name</span><span class="token operator">:</span> <span class="token string">"Pablo Camilo Ambrosio Rodrigues"</span>, <span class="token comment">//</span>
-  <span class="token key">role</span><span class="token operator">:</span> <span class="token string">"Multiplatform Application Development Student (1st year DAM)"</span>, <span class="token comment">//</span>
+  <span class="token key">role</span><span class="token operator">:</span> <span class="token string">"Multiplatform Application Development Student (2nd year DAM)"</span>, <span class="token comment">//</span>
   <span class="token key">company</span><span class="token operator">:</span> <span class="token string">"None"</span>, <span class="token comment">//</span>
   <span class="token key">focus</span><span class="token operator">:</span> [<span class="token string">"Software Development"</span>, <span class="token string">"Website Creation"</span>, <span class="token string">"System Automation"</span>], <span class="token comment">//</span>
   <span class="token key">tech</span><span class="token operator">:</span> [<span class="token string">"Java"</span>, <span class="token string">"Oracle SQL"</span>, <span class="token string">"PL/SQL"</span>, <span class="token string">"Docker"</span>, <span class="token string">"CSS"</span>, <span class="token string">"n8n"</span>, <span class="token string">"HTML"</span>], <span class="token comment">//</span>
@@ -124,8 +125,10 @@
       <section class="card widget-card experience-card" id="card-experience">
         <div class="card-header border-none">
           <div class="pill-tabs" role="tablist">
-            <button class="pill-tab active" data-tab="experience" role="tab" aria-selected="true" data-i18n="tab_experience">Experience</button>
-            <button class="pill-tab" data-tab="awards" role="tab" aria-selected="false" data-i18n="tab_awards">Awards</button>
+            <button class="pill-tab active" data-tab="experience" role="tab" aria-selected="true"
+              data-i18n="tab_experience">Experience</button>
+            <button class="pill-tab" data-tab="awards" role="tab" aria-selected="false"
+              data-i18n="tab_awards">Awards</button>
           </div>
         </div>
         <div class="card-content experience-content">
@@ -137,7 +140,8 @@
                   <span class="timeline-date" data-i18n="timeline_practicas_date">May 2026 - June 2026</span>
                 </div>
                 <p class="timeline-company">ANNEA.ai</p>
-                <p class="timeline-desc" data-i18n="timeline_practicas_desc">Infrastructure optimization, Database refactoring, and Critical bug resolution.</p>
+                <p class="timeline-desc" data-i18n="timeline_practicas_desc">Infrastructure optimization, Database
+                  refactoring, and Critical bug resolution.</p>
               </li>
             </ul>
           </div>
@@ -186,60 +190,20 @@
             <h2 class="card-title" data-i18n="dl_title">Documents & Downloads</h2>
             <p class="card-subtitle text-dim" data-i18n="dl_subtitle">Access my professional resources and files</p>
           </div>
-          <div class="badge-count"><span id="dl-count">2</span> <span data-i18n="dl_count_label">Files</span></div>
+          <div class="badge-count"><span id="dl-count">0</span> <span data-i18n="dl_count_label">Files</span></div>
         </div>
         <div class="card-content downloads-content">
-          <div class="downloads-grid" id="downloads-grid">
-            <a href="documents/CV-PabloCamilo.pdf" download="CV-PabloCamilo.pdf" class="download-item"
-              data-file="CV-PabloCamilo.pdf" data-size="43 KB">
-              <div class="item-icon-wrapper file-pdf">
-                <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <div class="item-details">
-                <span class="item-name">CV-PabloCamilo.pdf</span>
-                <span class="item-info text-dim" data-i18n="dl_pdf_info">43 KB • PDF (Spanish)</span>
-              </div>
-              <button class="btn-download" aria-label="Download file" data-i18n-attr="aria-label:dl_btn_label">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" style="width: 14px; height: 14px;">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </button>
-            </a>
-            <a href="documents/CV-PabloCamilo-English.pdf" download="CV-PabloCamilo-English.pdf" class="download-item"
-              data-file="CV-PabloCamilo-English.pdf" data-size="40 KB">
-              <div class="item-icon-wrapper file-pdf">
-                <svg class="file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <div class="item-details">
-                <span class="item-name">CV-PabloCamilo-English.pdf</span>
-                <span class="item-info text-dim" data-i18n="dl_pdf_info_en">40 KB • PDF (English)</span>
-              </div>
-              <button class="btn-download" aria-label="Download file" data-i18n-attr="aria-label:dl_btn_label">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" style="width: 14px; height: 14px;">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </button>
-            </a>
+          <div class="downloads-empty" id="downloads-empty">
+            <div class="empty-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <p class="empty-message" data-i18n="dl_empty">No files available for download at the moment</p>
           </div>
         </div>
       </section>

@@ -24,6 +24,7 @@ const TRANSLATIONS = {
     dl_pdf_info: "43 KB • PDF (Spanish)",
     dl_pdf_info_en: "40 KB • PDF (English)",
     dl_btn_label: "Download file",
+    dl_empty: "No files available for download at the moment",
     toast_downloading: "Downloading {fileName} ({fileSize})...",
     toast_download_success: "✅ {fileName} downloaded successfully",
     toast_light_mode: "Light Mode activated ☀️",
@@ -51,6 +52,7 @@ const TRANSLATIONS = {
     dl_pdf_info: "43 KB • PDF (Español)",
     dl_pdf_info_en: "40 KB • PDF (Inglés)",
     dl_btn_label: "Descargar archivo",
+    dl_empty: "No hay archivos disponibles para descargar en este momento",
     toast_downloading: "Descargando {fileName} ({fileSize})...",
     toast_download_success: "✅ {fileName} descargado con éxito",
     toast_light_mode: "Modo Claro activado ☀️",
@@ -119,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDottedMap();
   initDownloads();
   initCodeTypewriter();
+  initIdeBaseHoverExpand();
 });
 
 // -------------------------------------------------------------
@@ -605,9 +608,9 @@ function initDottedMap() {
     pulseAngle += 0.05;
     const isLightTheme = document.body.classList.contains('light-theme');
 
-    const baseColor = isLightTheme ? 'rgba(75, 85, 99, 0.22)' : 'rgba(213, 215, 218, 0.15)';
-    const hoverColor = isLightTheme ? 'rgba(75, 85, 99, 0.4)' : 'rgba(255, 255, 255, 0.3)';
-    const purpleAccent = isLightTheme ? '#09090b' : '#ffffff';
+    const baseColor = isLightTheme ? 'rgba(51, 65, 85, 0.35)' : 'rgba(213, 215, 218, 0.15)';
+    const hoverColor = isLightTheme ? 'rgba(15, 23, 42, 0.7)' : 'rgba(255, 255, 255, 0.3)';
+    const purpleAccent = isLightTheme ? '#0f172a' : '#ffffff';
 
     let hasMotion = false;
 
@@ -852,4 +855,56 @@ function initCodeTypewriter() {
 
     typeChar();
   }, 450);
+}
+
+// -------------------------------------------------------------
+// 8. IDE Card Base-Hover Expansion
+// -------------------------------------------------------------
+function initIdeBaseHoverExpand() {
+  const card = document.getElementById('card-profile');
+  if (!card) return;
+
+  let isInsideBase = false;
+
+  window.addEventListener('mousemove', (e) => {
+    // Only apply on desktop where grid expansion is active
+    if (window.innerWidth <= 768) {
+      if (card.classList.contains('is-expanded')) {
+        card.classList.remove('is-expanded');
+        isInsideBase = false;
+      }
+      return;
+    }
+
+    const rect = card.getBoundingClientRect();
+    // Strictly detect hover over the original 380px BASE square
+    const inBaseX = e.clientX >= rect.left && e.clientX <= rect.left + 380;
+    const inBaseY = e.clientY >= rect.top && e.clientY <= rect.bottom;
+
+    if (inBaseX && inBaseY) {
+      if (!isInsideBase) {
+        isInsideBase = true;
+        card.classList.add('is-expanded');
+      }
+    } else {
+      if (isInsideBase) {
+        isInsideBase = false;
+        card.classList.remove('is-expanded');
+      }
+    }
+  });
+
+  document.addEventListener('mouseleave', () => {
+    if (isInsideBase) {
+      isInsideBase = false;
+      card.classList.remove('is-expanded');
+    }
+  });
+
+  window.addEventListener('blur', () => {
+    if (isInsideBase) {
+      isInsideBase = false;
+      card.classList.remove('is-expanded');
+    }
+  });
 }
